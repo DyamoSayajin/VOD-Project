@@ -1,0 +1,1 @@
+Voici mon projet de serveur VOD hébérger chez moi, avec lequel je pourrai diffuser un film stocker dans ce-dernier à n'importe quel appareil du meme réseau local.
