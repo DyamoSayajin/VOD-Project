@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from VOD.views import acceuil,film
+from VOD.views import acceuil,player
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',acceuil),
-    path('film',film),
+    path('player',player),
 ]
