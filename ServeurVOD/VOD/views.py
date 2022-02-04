@@ -1,11 +1,31 @@
-from http.client import HTTPResponse
 from django.shortcuts import render
-from django.http import HttpResponse
+
+titre = {
+        'titre':'Site-VOD',
+        'soustitres':'Hello-World',
+        'videos' : 
+        [
+            {
+                'titre':'Eternals',
+                'description':'Marvel',
+            
+            },
+            {
+                'titre':'StarWars',
+                'description':'LucasFilm'
+
+            },
+            {
+                'titre':'RioLion',
+                'description':'Disney'
+            }
+        ]
+}
 
 def acceuil(request):
-    return HttpResponse("<h1>Projet-VOD</h1>")
+    return render (request,'index.html',titre)
 
 def player(request):
-    return HttpResponse("<h1>Page player d'une vidéo</h1>")
+    return render (request,'player.html')
 
 # Create your views here.

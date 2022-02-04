@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>{{titre}}</h1>
+<h2>{{soustitres}}</h2>
+
+{%for video in videos%}
+<h2>{{video.titre}}</h2>
+<p>{{video.description}}</p>
+{%endfor%}
+
+</body>
+</html>
