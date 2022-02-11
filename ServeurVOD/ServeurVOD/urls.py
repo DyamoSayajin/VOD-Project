@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from VOD.views import acceuil,player
+from VOD.views import acceuil,player   #Importation des fonctions d'affichage des pages html.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',acceuil),
-    path('player',player),
+    path('',acceuil), #Url de la page acceuil. ---> Par défaut.
+    path('player',player), #Url de la page player.
 ]
