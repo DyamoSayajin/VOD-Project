@@ -7,6 +7,10 @@
 {%for video in videos%}
 <h2>{{video.nom}}</h2>
 <p>{{video.largeur}}x{{video.hauteur}}</p>
+<video controls="controls" preload="auto" muted="false">
+	<source src="/videos/{{video.fichier}}" type="video/mp4">
+</video>
+<a href="\player?name={{video.fichier}}">Lien</a>
 {%endfor%}
 
 </body>

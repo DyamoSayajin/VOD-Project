@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from VOD.views import acceuil,player   #Importation des fonctions d'affichage des pages html.
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',acceuil), #Url de la page acceuil. ---> Par défaut.
     path('player',player), #Url de la page player.
-]
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

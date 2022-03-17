@@ -13,8 +13,12 @@ def liste_videos():
         nom_video = ''.join(fichier.split('.')[:-1]) #Séparation de l'extension et du nom.
         dictionnaire = {
             'nom':nom_video,
+            'fichier':fichier,
             'hauteur':height,
-            'largeur':width
+            'largeur':width,
+            'lien':file_path
         }
         liste.append(dictionnaire)
     return liste
+
+print(liste_videos())
