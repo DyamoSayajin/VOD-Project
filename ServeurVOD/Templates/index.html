@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
+
+
+<head>
+{% load static %}
+<meta charset="utf-8">
+<title>VOD-Project</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+
+
 <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Films</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
 <h1>{{titre}}</h1>
 <h2>{{soustitres}}</h2>
 
-{%for video in videos%}
-<h2>{{video.nom}}</h2>
-<p>{{video.largeur}}x{{video.hauteur}}</p>
-<a href="\player?name={{video.fichier}}"><img src="{{video.poster}}" width='23%'/></a>
-{%endfor%}
+<h3>{{nouveaute.nom}}</h3>
+
+<div class="container">
+	<div class="row">
+			{%for video in videos%}
+				<div class="col-4">
+					<h3>{{video.nom}}</h3>
+					<p>{{video.largeur}}x{{video.hauteur}}</p>
+					<a href="\player?name={{video.fichier}}"><img src="{{video.poster}}" width='80%'/></a>
+				</div>
+			{%endfor%}
+	</div>
+</div>
+
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0);">
+    © 2020 Copyright: Dyamo
+  </div>
+  <!-- Copyright -->
+</footer>
 
 </body>
 </html>

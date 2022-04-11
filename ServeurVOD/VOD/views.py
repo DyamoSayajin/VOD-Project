@@ -4,8 +4,9 @@ from VOD.dico_video import liste_videos
 
 #Dictionnaire contenant le titre et la description de chaque fichier dans le dossier vidéos.Elle sera renvoyé par une fonction dans un autre fichier python.
 titre = {
-    'titre':'BONJOUR',
-    'soustitres':'COMME CA VA VA ?',
+    'titre':'NOFLIX AND NO CHILL',
+    'soustitres':'LOL',
+    'nouveaute':liste_videos()[0],
     'videos': liste_videos()
 }
 

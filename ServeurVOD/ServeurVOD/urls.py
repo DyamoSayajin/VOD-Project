@@ -24,4 +24,4 @@ urlpatterns = [
     path('',acceuil), #Url de la page acceuil. ---> Par défaut.
     path('player',player), #Url de la page player.
     
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

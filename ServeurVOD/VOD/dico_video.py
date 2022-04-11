@@ -24,4 +24,4 @@ def liste_videos():
         liste.append(dictionnaire)
     return liste
 
-print(liste_videos())
+liste_videos()
